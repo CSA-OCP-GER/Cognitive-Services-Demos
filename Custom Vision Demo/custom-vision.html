@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Custom Vision API</title>
+  <script type="text/javascript" src="jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="restClient.js"></script>
+  	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+			$('#imgName').bind('input', function() {
+			    $('#imageHolder').attr('src', $(this).val()); //concatinate path if required
+			});
+
+		});
+	</script>
+</head>
+<body style="background-color:#F2F2F2">
+<!--<div id="left_bar" style="padding-left:1%;background-color:#F5D0A9;width=50px;height:500px">
+</div> -->
+<div id="left_box" style="font-size:17pt;background-color:#F5D0A9;padding-left:10%;float:left;width:25%;height:13%">	
+	Mit <b>Custom Vision API</b>wurde ein benutzerdefiniertes Modell erstellt, um Yorkshire Terrier Hunde zu erkennen.
+</div>
+
+<div id="right_box" style="font-size:17pt;background-color:#F5D0A9;padding-right:10%;float:right;width:25%;height:13%">	
+
+	Das Modell erwartet als Eingabe eine Bild-URL und berechnet wie  wahrscheinlich es sich um einen Yorkshire Terrier handelt.
+
+</div>
+<!--<div id="middle_box" style="background-color:#F2F2F2;height:100px;">-->
+<div id="middle_box" style="background-color:#F5D0A9;height:16%;">
+<h1 style="padding-top:1%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OCP All-Hands</h1>
+</div>
+<div id="main">
+Bild-URL: <input type="text" name="" id="imgName" value="" placeholder="Input image URL"><br><br>
+<img name="imageHolder" id="imageHolder" width="29%" height="45%">
+<div id="showData" style="float:right;padding-right:500px;">
+</div>
+
+</div>
+<button type="submit" onclick="javascript:send(document.getElementById('imgName').value)">Berechne Wahrscheinlichkeiten</button>
+<div id="footer" style = "background-color:#F5D0A9;width:100%;height:18%;padding-top:5%;margin-top:1%;">
+</div>
+</body>
+</html>
+
+
